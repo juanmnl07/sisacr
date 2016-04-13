@@ -1,0 +1,4 @@
+name = Sisa clrcache
+description = custom module for clear all caches when a content is updated
+package = custom
+core = 7.x

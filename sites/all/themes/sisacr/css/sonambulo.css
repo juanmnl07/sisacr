@@ -1,0 +1,37 @@
+/*
+  =BASE
+--------------------------------------------- */
+html {
+  border-top: 6px solid #000;
+}
+body {
+  padding: 0;
+}
+/*
+  =LAYOUT
+--------------------------------------------- */
+.header {
+  background: #3C3B3B;
+}
+.header .grid,
+.main-content,
+.footer .footer-content{ /*.footer*/
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.one-sidebar .main {
+  width: 60%;
+  padding: 0 0.875em;
+}
+.one-sidebar #sidebar-first {
+  width: 40%;
+  padding: 0 0.875em;
+}
+.sidebar-first .main {
+  float: left;
+}
+.sidebar-first #sidebar-first {
+  float: right;
+}
