@@ -1,16 +1,16 @@
 <?php
 /**
- *  implements hook_update_node()
+ *  implements hook_node_update()
  */
  function sisa_clrcache_node_update($node){
     //clear all caches when a node is updated
  	$nodeurl = url('node/'. $node->nid);
   	cache_clear_all($nodeurl, 'cache_page');
-  	drupal_flush_all_caches();
+  	drupal_flush_all_caches();	
  }
 
  /**
- *  implements hook_update_node()
+ *  implements hook_node_insert()
  */
  function sisa_clrcache_node_insert(){
     //clear all caches when a node is added
@@ -19,9 +19,18 @@
  }
 
  /**
- *  implements hook_update_node()
+ *  implements hook_node_delete()
  */
  function sisa_clrcache_node_delete(){
+    //clear all caches when a node is deleted
+  drupal_flush_all_caches();
+
+ }
+
+  /**
+ *  implements hook_cron()
+ */
+ function sisa_clrcache_cron(){
     //clear all caches when a node is deleted
   drupal_flush_all_caches();
 
